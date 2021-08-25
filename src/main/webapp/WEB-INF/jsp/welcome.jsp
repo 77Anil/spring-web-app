@@ -9,7 +9,16 @@
     <title>Document</title>
 </head>
 <body>
-   	<h3>Welcome</h3> 
+   	<h3>Welcome ${name} </h3> 
+   	
+   <c:forEach items="${personlist}" var="list">
+     <tr>
+         <td>${list}</td>
+         <td>${list.name} - ${list.location}</td> 
+        
+     </tr>
+   </c:forEach>
+   	
 </body>
 <script>
     if(window.innerHeight > window.innerWidth){
