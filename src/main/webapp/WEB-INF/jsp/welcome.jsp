@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +13,10 @@
 <body>
    	<h3>Welcome ${name} </h3> 
    	
+   	
    <c:forEach items="${personlist}" var="list">
      <tr>
-         <td>${list}</td>
+         <td>${list.id}</td>
          <td>${list.name} - ${list.location}</td> 
         
      </tr>
